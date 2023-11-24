@@ -23,6 +23,6 @@
         --type=kubernetes.io/dockerconfigjson
       AWS_REGION=$AWS_REGION helm repo add stable-petclinic s3://petclinic-helm-charts-ruben/stable/myapp/
       AWS_REGION=$AWS_REGION helm repo update
-      AWS_REGION=$AWS_REGION helm upgrade --install \
-        petclinic-app-release stable-petclinic/petclinic_chart --version ${BUILD_NUMBER} \
+      AWS_REGION=AWS_REGION helm upgrade --install \
+        petclinic-app-release stable-petclinic/petclinic_chart --version 2 \
         --namespace petclinic-dev
